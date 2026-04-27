@@ -4,6 +4,216 @@
   box-sizing: border-box;
 }
 
+.container {
+  width: 80%;
+  max-width: 1176px;
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
 body {
   font-family: 'Open Sans Variable', sans-serif;
+}
+
+header {
+
+
+  ul {
+    display: flex;
+
+
+    li {
+      display: flex;
+      list-style: none;
+      padding: 1rem;
+      align-items: center;
+
+
+      a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: black;
+
+      }
+    }
+
+  }
+}
+
+main {
+
+  .mainContentTop {
+    background-color: black;
+    color: white;
+  }
+
+
+
+
+
+}
+
+
+
+.bluList {
+  background-color: blue;
+
+  ul {
+    display: flex;
+
+
+    li {
+      list-style: none;
+      padding: 1rem;
+
+      button {
+        background-color: transparent;
+        border: transparent;
+
+        h3 {
+          padding: 1rem;
+          white-space: nowrap;
+
+
+        }
+      }
+
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+      text-transform: uppercase;
+
+
+
+      img {
+        width: 40px;
+        /* scegli la dimensione che preferisci */
+        height: 40px;
+        object-fit: cover;
+        /* mantiene il rapporto e ritaglia se necessario */
+        display: block;
+
+
+      }
+
+    }
+  }
+
+
+}
+
+footer {
+
+  background-image: url(./assets/img/footer-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+
+
+
+  .topFooter {
+
+    display: flex;
+
+    .topFootList {
+      display: flex;
+
+      li {
+        list-style: none;
+        padding: 0 1rem;
+        white-space: nowrap;
+
+        h3 {
+          text-transform: uppercase;
+          padding: 1rem 0;
+          color: white;
+
+
+
+        }
+
+        a {
+          text-transform: capitalize;
+          text-decoration: none;
+          color: grey;
+
+        }
+
+      }
+    }
+  }
+
+
+
+  .footNavbar {
+    display: flex;
+    width: 100%;
+    left: 0;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(51, 50, 50);
+
+    button {
+
+      background-color: transparent;
+
+
+      a {
+        text-transform: capitalize;
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+
+    }
+
+    .signUp {
+      border-color: blue;
+      padding: 1rem;
+
+      a {
+        color: white;
+      }
+
+    }
+
+
+
+
+
+
+    .footList {
+      align-items: center;
+      display: flex;
+      list-style: none;
+
+
+
+      li {
+        padding: 0.5rem;
+      }
+
+      .followUs {
+        border-color: transparent;
+
+        a {
+          text-transform: uppercase;
+          font-weight: bold;
+          color: blue;
+        }
+      }
+
+    }
+  }
+
+  .topFooter {}
 }

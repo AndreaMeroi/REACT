@@ -1,8 +1,98 @@
+import topFootLogo from "../assets/img/dc-logo-bg.png"
+import facebook from "../assets/img/footer-facebook.png"
+import pinterest from "../assets/img/footer-pinterest.png"
+import twitter from "../assets/img/footer-twitter.png"
+import periscope from "../assets/img/footer-periscope.png"
+import youtube from "../assets/img/footer-youtube.png"
+
+import BluList from "./BluList"
+
 export default function AppFooter() {
     return (
-        <footer>
-            Ciao Sono il footer
-        </footer>
+        <>
+            <footer>
 
+                <BluList />
+
+                <div className="container">
+                    <div className="topFooter">
+                        <div className="topFootList">
+                            <ul>
+                                <li>
+                                    <h3>     dc comics       </h3>
+                                </li>
+                                <li><a href="">carachters</a></li>
+                                <li><a href="">comics</a></li>
+                                <li><a href="">movies</a></li>
+                                <li><a href="">TV</a></li>
+                                <li><a href="">Games</a></li>
+                                <li><a href="">videos</a></li>
+                                <li><a href="">news</a></li>
+                                <li>
+                                    <h3>     shop       </h3>
+                                </li>
+                                <li><a href="">shop DC</a></li>
+                                <li><a href="">shop DC collectibles</a></li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <h3>     dc        </h3>
+                                </li>
+                                <li><a href="">terms of use</a></li>
+                                <li><a href="">pricing policy (New)</a></li>
+                                <li><a href="">ad choices</a></li>
+                                <li><a href="">advertising</a></li>
+                                <li><a href="">jobs</a></li>
+                                <li><a href="">subscriptions</a></li>
+                                <li><a href="">talent workshops</a></li>
+                                <li><a href="">CSPC certificates</a></li>
+                                <li><a href="">ratings</a></li>
+                                <li><a href="">shop help</a></li>
+                                <li><a href="">contact us</a></li>
+
+                            </ul>
+                            <ul>
+                                <li>
+                                    <h3>     sites      </h3>
+                                </li>
+                                <li><a href="">DC</a></li>
+                                <li><a href="">MAD Magazine</a></li>
+                                <li><a href="">DC kids</a></li>
+                                <li><a href="">DC universe</a></li>
+                                <li><a href="">DC power visa</a></li>
+                            </ul>
+                        </div>
+
+                        <div className="topFootLogo">
+                            <img src={topFootLogo} alt="" />
+                        </div>
+
+                    </div>
+
+                    <nav className="footNavbar">
+                        <div className="container">
+                            <button className="signUp" type="button">
+                                <a href="">sign up now!</a>
+                            </button>
+                            <ul className="footList">
+                                <li>
+                                    <button className="followUs" type="button">
+                                        <a href="">follow us</a>
+                                    </button>
+                                </li>
+                                <li><a href=""><img src={facebook} alt="" /></a></li>
+                                <li><a href=""><img src={twitter} alt="" /></a></li>
+                                <li><a href=""><img src={periscope} alt="" /></a></li>
+                                <li><a href=""><img src={pinterest} alt="" /></a></li>
+                                <li><a href=""><img src={youtube} alt="" /></a></li>
+                            </ul>
+                        </div>
+
+
+                    </nav>
+
+                </div>
+            </footer >
+        </>
     )
 }
