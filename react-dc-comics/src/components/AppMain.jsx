@@ -1,10 +1,13 @@
 import ProductCard from "./ProductCard";
+import Jumbotron from '../assets/img/jumbotron.jpg'
+
 
 export default function AppMain() {
     return (
         <>
             <main>
 
+                <img src={Jumbotron} alt="" />
 
                 <div className="container">
                     <div className="row">
