@@ -1,4 +1,5 @@
-import molisanaLogo from '../assets/img/logo.png'
+
+import AppLogo from './AppLogo'
 
 export default function AppFooter() {
 
@@ -7,7 +8,8 @@ export default function AppFooter() {
             <div className="container">
                 <div className="row">
                     <div className="col">
-                        <img src={molisanaLogo} alt="" />            </div>
+                        <AppLogo slogan={'La pasta buona buona!'} />
+                    </div>
                     <div className="col">
                         <h3>Pastificio</h3>
                         <ul>

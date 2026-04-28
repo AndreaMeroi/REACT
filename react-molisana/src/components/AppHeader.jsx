@@ -1,11 +1,10 @@
-import molisanaLogo from '../assets/img/logo.png'
-
+import AppLogo from "./AppLogo"
 
 export default function AppHeader() {
     return (
         <header>
 
-            <img src={molisanaLogo} alt="" />
+            <AppLogo />
             <nav>
                 <a href="" className='active' >Home </a>
                 <a href="">Prodotti </a>
