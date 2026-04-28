@@ -1,0 +1,57 @@
+NOME: "N.4 Spaghetto Quadrato Bucato"
+IMMAGNE: "https://www.lamolisana.it/wp-content/uploads/2021/04/1-spaghetto-quadrato.jpg"
+
+-------------------
+
+NOME: "N.5 Fettuccine"
+IMMAGNE: "https://www.lamolisana.it/wp-content/uploads/2021/04/5-fettuccine.jpg"
+
+-------------------
+
+NOME: "N.6 Linguine"
+IMMAGNE: "https://www.lamolisana.it/wp-content/uploads/2021/04/6-linguine.jpg"
+
+-------------------
+
+NOME: "N.7 Mezze Linguine"
+IMMAGNE: "https://www.lamolisana.it/wp-content/uploads/2021/04/7-mezze-linguine.jpg"
+
+-------------------
+
+NOME: "n.11 Spaghettino Quadrato"
+IMMAGNE: "https://www.lamolisana.it/wp-content/uploads/2021/04/11-spaghettino-quadrato.jpg"
+
+-------------------
+
+NOME: "N.38 Mezze maniche"
+IMMAGNE: "https://www.lamolisana.it/wp-content/uploads/
+
+-------------------
+
+NOME: "N.44 Sedani"
+IMMAGNE: "https://www.lamolisana.it/wp-content/uploads/2021/05/44-sedani.jpg"
+
+-------------------
+
+NOME: "N.49 Sedanini"
+IMMAGNE: "https://www.lamolisana.it/wp-content/uploads/2021/05/49-sedani.jpg"
+
+-------------------
+
+NOME: "N.53 Lumachine"
+IMMAGNE: "https://www.lamolisana.it/wp-content/uploads/2021/05/53-lumachine.jpg"
+
+-------------------
+
+NOME: "N.55 Chifferi rigati"
+IMMAGNE: "https://www.lamolisana.it/wp-content/uploads/2021/05/55-chifferi-rigati.jpg"
+
+-------------------
+
+NOME: "N.58 Misto corto"
+IMMAGNE: "https://www.lamolisana.it/wp-content/uploads/2021/05/58-misto-corto.jpg"
+
+-------------------
+
+NOME: "N.84 Ditale Quadrato"
+IMMAGINE: "https://www.lamolisana.it/wp-content/uploads/2021/06/84-ditale-quadrato.jpg"

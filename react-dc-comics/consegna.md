@@ -25,3 +25,13 @@ le icone.
 
 Confermate lettura come al solito e buon divertimento! 
 <:babyyoda:1374696912799924234>
+
+DESCRZIONE PARTE 2:
+Lavoriamo sul nostro sito dei fumetti per dinamicizzare le card dei fumetti, sfruttando le props. 
+
+Una volta inseriti tutti i contenuti dinamicamente, completate il vostro layout e rifinite i dettagli col CSS.
+
+BONUS:
+Immaginare e creare la struttura dati per i link in header e nel footer e realizzarli tramite l’iterazione!
+
+Confermate lettura come al solito e buon divertimento 
