@@ -13,6 +13,22 @@
   justify-content: space-between;
 }
 
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1rem;
+}
+
+.col {
+  width: calc(100% / 3);
+  padding: 1rem;
+
+}
+
+img {
+  max-width: 100%;
+}
+
 body {
   font-family: 'Open Sans Variable', sans-serif;
 }
@@ -44,10 +60,13 @@ header {
 
 main {
 
-  .mainContentTop {
-    background-color: black;
-    color: white;
+  background-color: rgb(42, 42, 42);
+  color: white;
+
+  .container {
+    display: flex;
   }
+
 
 
 
@@ -216,4 +235,17 @@ footer {
   }
 
   .topFooter {}
+}
+
+.card {
+  background-color: transparent;
+
+  img {
+    max-width: 100%;
+  }
+
+  h3 {
+    text-align: center;
+    padding: 1rem 0;
+  }
 }
