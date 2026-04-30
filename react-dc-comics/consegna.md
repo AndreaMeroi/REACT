@@ -35,3 +35,18 @@ BONUS:
 Immaginare e creare la struttura dati per i link in header e nel footer e realizzarli tramite l’iterazione!
 
 Confermate lettura come al solito e buon divertimento 
+
+<@&1337133589195657319> 
+Ciao Classe,
+Esercizio di oggi: DC Comics
+nome repo: react-dc-comics
+
+DESCRZIONE PARTE 3:
+Lavoriamo sul nostro sito dei fumetti per dinamicizzare sia la navbar che il menu nel footer, sfruttando l’iterazione con JSX. 
+
+- Per la navbar, vi invitiamo  a ragionare su quale possa essere la struttura dati corretta
+- Per il menu del footer anche
+
+Una volta inseriti tutti i contenuti dinamicamente, se necessario finite di completate il vostro layout e rifinite i dettagli col CSS.
+
+Confermate lettura come al solito <:babyyoda:1374696912799924234>

@@ -7,7 +7,7 @@ export default function AppMain() {
         <>
             <main>
 
-                <img src={Jumbotron} alt="" />
+
 
                 <div className="container">
                     <div className="row">

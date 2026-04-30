@@ -14,8 +14,10 @@ function App() {
       <AppHeader />
       <AppMain />
       <AppFooter />
+
     </>
   )
 }
+
 
 export default App

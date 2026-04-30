@@ -1,0 +1,121 @@
+const footer_menu = [
+    {
+        id: 1,
+        title: 'dc comics ',
+        list: [
+            {
+                id: 1,
+                text: 'characters',
+                link: '#'
+            }, {
+                id: 2,
+                text: 'comics',
+                link: '#'
+            }, {
+                id: 3,
+                text: 'movies',
+                link: '#'
+            }, {
+                id: 4,
+                text: 'TV',
+                link: '#'
+            }, {
+                id: 5,
+                text: 'Games',
+                link: '#'
+            }, {
+                id: 6,
+                text: 'videos',
+                link: '#'
+            }, {
+                id: 7,
+                text: 'news',
+                link: '#'
+            }
+        ]
+
+    },
+    {
+        id: 2,
+        title: 'shop',
+        list: [
+            {
+                id: 1,
+                text: 'shop DC',
+                link: '#'
+            }, {
+                id: 2,
+                text: 'shop DC collectibles',
+                link: '#'
+            }
+        ]
+
+    },
+    {
+        id: 3,
+        title: 'dc',
+        list: [
+            {
+                id: 1,
+                text: 'terms of use',
+            }, {
+                id: 2,
+                text: 'pricing policy (New)',
+            }, {
+                id: 3,
+                text: 'ad choices',
+            }, {
+                id: 4,
+                text: 'advertising',
+            }, {
+                id: 5,
+                text: 'jobs',
+            }, {
+                id: 6,
+                text: 'subscriptions',
+            }, {
+                id: 7,
+                text: 'talent workshops',
+            }, {
+                id: 8,
+                text: 'CSPC certificates',
+            }, {
+                id: 9,
+                text: 'ratings',
+            }, {
+                id: 10,
+                text: 'shop help',
+            }, {
+                id: 11,
+                text: 'contact us',
+            }
+        ]
+
+    },
+    {
+        id: 4,
+        title: 'sites',
+        list: [
+            {
+                id: 1,
+                text: 'DC',
+            }, {
+                id: 2,
+                text: 'MAD Magazine',
+            }, {
+                id: 3,
+                text: 'DC kids',
+            }, {
+                id: 4,
+                text: 'DC universe',
+            }, {
+                id: 5,
+                text: 'DC power visa',
+            }
+        ]
+
+    }
+
+]
+
+export default footer_menu

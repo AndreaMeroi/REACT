@@ -1,6 +1,9 @@
 import dcLogo from "../assets/img/dc-logo.png"
-
+import header_menu from "../data/heder_menu"
 export default function AppHeader() {
+
+
+
     return (
         <header>
 
@@ -8,34 +11,14 @@ export default function AppHeader() {
                 <img src={dcLogo} alt="" />
 
                 <ul>
-                    <li>
-                        <a href="">characters</a>
-                    </li>
-                    <li>
-                        <a href="">comics</a>
-                    </li>
-                    <li>
-                        <a href="">movies</a>
-                    </li>
-                    <li>
-                        <a href="">tv</a>
-                    </li>
-                    <li>
-                        <a href="">games</a>
-                    </li>
-                    <li>
-                        <a href="">collections</a>
-                    </li>
-                    <li>
-                        <a href="">videos</a>
-                    </li>
-                    <li>
-                        <a href="">fans</a>
-                    </li>
-                    <li>
-                        <a href="">shop</a>
-                    </li>
+                    {
+                        header_menu.map(list_item =>
 
+                            <li key={list_item.id}>
+                                <a href={list_item.link} >{list_item.text}</a>
+                            </li>
+                        )
+                    }
                 </ul>
 
             </div>
