@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  background-color: blue;
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+header {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+
+      a {
+        text-decoration: none;
+        color: white;
+        padding: 0.5rem;
+
+        &:hover {
+          text-decoration: underline;
+          background-color: lightblue;
+        }
+      }
+    }
+  }
+}

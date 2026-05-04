@@ -1,5 +1,4 @@
 import AppLogo from './AppLogo'
-import footer_menu from '../data/footer_menu'
 {/*
    const footer_menu = [
     {
@@ -69,7 +68,7 @@ import footer_menu from '../data/footer_menu'
 }
 
 
-export default function AppFooter() {
+export default function AppFooter({ footer_menu }) {
 
     return (
         <footer>
@@ -80,8 +79,10 @@ export default function AppFooter() {
                     </div>
                     {/*first iteration for the menus  */}
                     {footer_menu.map(item => (
+
                         <div className="col" key={item.id}>
                             <h3>{item.title}</h3>
+
                             {/*second iteration for each sum item list */}
 
                             <ul>

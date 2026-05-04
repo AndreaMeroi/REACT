@@ -50,3 +50,9 @@ Lavoriamo sul nostro sito dei fumetti per dinamicizzare sia la navbar che il men
 Una volta inseriti tutti i contenuti dinamicamente, se necessario finite di completate il vostro layout e rifinite i dettagli col CSS.
 
 Confermate lettura come al solito <:babyyoda:1374696912799924234>
+
+Descrizione 4:
+Continuate a lavorare nella stessa repo di ieri e create un nuovo componente riutilizzabile per visualizzare le card dei fumetti, sfruttando l’array di oggetti in allegato la scorsa volta. Fate in modo che il componente riceva i dati del singolo fumetto come props.
+
+
+Bonus: Provare a centralizzare i dati facendoli partire tutti da App.jsx e passandoli via prop ai vari componenti che li necessitano

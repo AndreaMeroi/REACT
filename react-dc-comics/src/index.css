@@ -20,13 +20,15 @@
 }
 
 .col {
-  width: calc(100% / 3);
+  width: calc(100% / 6);
   padding: 1rem;
 
 }
 
+/*regola di reset immagini per far prendere alle immagini le dimemsioni del blocco che le contiene*/
 img {
   max-width: 100%;
+
 }
 
 body {
@@ -36,7 +38,7 @@ body {
 header {
 
 
-  ul {
+  nav {
     display: flex;
 
 
@@ -205,11 +207,6 @@ footer {
 
     }
 
-
-
-
-
-
     .footList {
       align-items: center;
       display: flex;
@@ -234,7 +231,7 @@ footer {
     }
   }
 
-  .topFooter {}
+
 }
 
 .card {
@@ -248,4 +245,9 @@ footer {
     text-align: center;
     padding: 1rem 0;
   }
+}
+
+.jumbotron {
+  max-height: 350px;
+  overflow: hidden;
 }

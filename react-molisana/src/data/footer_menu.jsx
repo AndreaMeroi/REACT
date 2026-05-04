@@ -1,5 +1,6 @@
 const footer_menu = [
     {
+        id: 1,
         title: 'Pastificio',
         list: [
             {
@@ -31,6 +32,7 @@ const footer_menu = [
 
     },
     {
+        id: 2,
         title: 'products',
         list: [
             {

@@ -1,20 +1,24 @@
 import topFootLogo from "../assets/img/dc-logo-bg.png"
 
 import nav_links from "../data/nav_links"
+import AppNavFooter from "./AppNavFooter"
 
 import BluList from "./BluList"
-import footer_menu from "../data/footer_menu-jsx"
 
 
-export default function AppFooter() {
+
+export default function AppFooter({ footer_menu }) {
     return (
         <>
             <footer>
 
                 <BluList />
                 <div className="container">
+
                     <div className="topFooter">
-                        <div className="topFootList">
+                        <AppNavFooter footer_menu={footer_menu} />
+                        {/*
+                          <div className="topFootList">
                             {footer_menu.map(item => (
                                 <ul key={item.title}>
                                     <li>
@@ -28,9 +32,7 @@ export default function AppFooter() {
                                 </ul>
                             ))}
                         </div>
-
-
-
+                        */}
                         {
                             /*
     

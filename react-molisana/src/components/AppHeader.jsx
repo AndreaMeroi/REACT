@@ -1,5 +1,25 @@
 import AppLogo from "./AppLogo"
-import header_menu from "../data/header_menu"
+import AppNav from "./AppNav"
+
+// ho centralizzato i dati del header_menu in app.jsx, perciò da qui li cancello
+/*import header_menu from "../data/header_menu"*/
+
+
+export default function AppHeader({ header_menu }) {
+
+
+
+    return (
+        <header>
+
+            <AppLogo />
+            <AppNav header_menu={header_menu} />
+
+        </header >
+    )
+
+}
+
 //const menu = {'home', 'prodotti', 'chi siamo', 'contatti']
 //const menu = [<li>home</li>, <li> prodotti</li>, <li>chi siamo</li>, <li>contatti</li>]
 
@@ -34,38 +54,3 @@ import header_menu from "../data/header_menu"
     ]
     */}
 
-export default function AppHeader() {
-
-
-
-    return (
-        <header>
-            {/*
-         <ul>
-                {menu.map((teacher) => (
-                    <li>{teacher}</li>
-                ))}
-            </ul>
-         */}
-
-
-
-            <AppLogo />
-            <nav>
-                {
-                    header_menu.map(item => <a href={item.link} key={item.id} className={item.is_active && 'active'}>{item.text} </a>)
-                }
-                {/*
-                <a href="" className='active' >Home </a>
-                <a href="">Prodotti </a>
-                <a href="">Chi Siamo </a>
-                <a href="">Contatti</a> 
-                */
-
-                }
-            </nav>
-
-        </header>
-    )
-
-}
