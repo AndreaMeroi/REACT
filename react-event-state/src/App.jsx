@@ -1,3 +1,4 @@
+import AppAccordion from "./components/AppAccordion"
 import Counter from "./components/Counter"
 import De_counter from "./components/de_counter"
 
@@ -18,7 +19,10 @@ function App() {
 
   return (
     <>
+      {/*Accordion example */}
+      <AppAccordion />
 
+      {/*Counte - de_counter examples */}
       <Counter />
       <De_counter />
 
