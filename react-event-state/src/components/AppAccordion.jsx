@@ -32,10 +32,10 @@ export default function AppAccordion() {
         }
     ]
 
-    function handleClick(e) {
-        console.log('Clicked', e);
+    function handleClick(element) {
+        console.log('Clicked', element.title);
         console.log(currentAccordion);
-        setCurrentAccordion(2)
+        setCurrentAccordion(element)
 
     }
 
@@ -44,7 +44,7 @@ export default function AppAccordion() {
 
             {elements.map(item =>
                 <div className="item" key={item.id}>
-                    <h2 onClick={handleClick}>{item.title}</h2>
+                    <h2 onClick={() => handleClick(item)}>{item.title}</h2>
 
                     {/*se currentAccordion è uguale a item.id allora stampa il <p> */}
                     {currentAccordion == item.id && <p>{item.text}</p>}
