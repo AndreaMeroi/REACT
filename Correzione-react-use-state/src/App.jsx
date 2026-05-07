@@ -28,6 +28,8 @@ function App() {
   console.log(languages);
 
 
+
+
   //  uso l'indice per far aprire l'elemento cliccato 
   function handleClick(index) {
     console.log('Click on element with id:', index);
