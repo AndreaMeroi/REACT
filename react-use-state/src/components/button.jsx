@@ -5,7 +5,7 @@ export default function Button({ languages }) {
 
 
     // 2. Crea lo stato. Inizialmente è null (nessun bottone cliccato)
-    const [selectedLanguage, setSelectedLanguage] = useState(null)
+    const [selectedLanguage, setSelectedLanguage] = useState(0)
 
     console.log("Linguaggio selezionato attualmente:", selectedLanguage);
 
