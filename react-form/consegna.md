@@ -14,3 +14,4 @@ BONUS
 
 Aggiungere la possibilità di cancellare ciascun articolo utilizzando un'icona.
 Impostare il lavoro su più componenti.
+c
