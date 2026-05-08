@@ -66,24 +66,11 @@ function App() {
 
   return (
     <>
-
-      <header>
-
-      </header>
+      <header></header>
       <main>
         <Form titles={titles} newTitle={newTitle} setNewTitle={setNewTitle} handleSubmit={handleSubmit} handleDelete={handleDelete} />
       </main>
       <footer></footer>
-      {/*
- <form onSubmit={handleSubmit}>
-        <Input newTitle={newTitle} setNewTitle={setNewTitle} />
-
-        <UlTitles titles={titles} handleDelete={handleDelete} />
-      </form>
-*/}
-
-
-
     </>
   )
 }
