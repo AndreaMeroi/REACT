@@ -12,11 +12,9 @@ const list = [
 
 
 
-export default function AppMain({ title }) {
+export default function AppMain({ title, movies, setMovies }) {
 
     const [newMovie, setNewMovie] = useState('')
-    const [movies, setMovies] = useState(list)
-
 
     function handleInput(e) {
         setNewMovie(e.target.value)
@@ -27,7 +25,24 @@ export default function AppMain({ title }) {
         e.preventDefault()
         console.log(newMovie);
 
+        setMovies([newMovie, ...movies]);
+        setNewMovie('')
+
     }
+
+    function handleClick(index) {
+        console.log('clicked element', index);
+        console.log(movies);
+
+
+        // filter the list 
+        const filteredMovies = movies.filter((_, i) => i !== index)
+        console.log(filteredMovies);
+
+        //invoke setMovies to update the list 
+        setMovies(filteredMovies)
+    }
+
 
     return (
 
@@ -42,8 +57,7 @@ export default function AppMain({ title }) {
             </div>
 
 
-            <WatchList list={list} />
-
+            <WatchList list={movies} onTrashClick={handleClick} />
 
         </main >
     )
