@@ -24,24 +24,74 @@ BONUS
 - creare un clone dell'array senza l'indice dell'elemento cliccato usando filter 
 
 2. Impostare il lavoro su più componenti.
+
+> <@&1337133589195657319> 
+Ciao Classe,
+esercizio di oggi: **React Blog Form Multifield**
+repo: `react-form-multifield`
+
+**Esercizio**
+> 
+> 
+> Ampliare l'esercizio precedente aggiungendo, nel form, 
+il campo autore, contenuto ed un campo per una categoria a 
+scelta tra: *FrontEnd, BackEnd e UI/UX* (utilizzando una select)
+> 
+> Aggiornare la visualizzazione della lista degli articoli, mostrando le nuove informazioni inserite.
+> 
+> BONUS:
+> 
+> 1. Aggiungere un campo checkbox “Pubblicato” (che indica se l’articolo debba essere visibile o meno). 
+> 
+> Buon divertimento <:babyyoda:1374696912799924234> !
+>
 */
 
 
 import { useState } from 'react'
-import initialTitles from './data/initialTitles'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import initialArticlesData from './data/initialArticlesData'
+import initialFormData from './data/initialFormData';
 import Form from './components/form'
 
 
 
 function App() {
 
-  const [newTitle, setNewTitle] = useState('')  //riporta vuoto il campo input 
-  const [titles, setTitles] = useState(initialTitles)
+  const [formData, setFormData] = useState(initialFormData)
+  const [articlesData, setArticlesData] = useState(initialArticlesData)
+
+
+
+  function handleChange(e) {
+
+    const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value
+    console.log(value);
+
+
+    console.log({ ...formData, [e.target.name]: value });
+
+    setFormData({ ...formData, [e.target.name]: value });
+
+
+  }
 
   function handleSubmit(e) {
     e.preventDefault()
-    console.log('you submitted thr new Title', newTitle);
+    console.log('you submitted thr new Title', formData);
 
+    const articleData = {
+      id: Date.now(),
+      ...formData
+    }
+
+
+    setArticlesData([articleData, ...articlesData])
+
+    setFormData(initialFormData) //riporta vuoto il campo input 
+
+
+    /*
     if (newTitle.length > 5) {
 
       setTitles([newTitle, ...titles])
@@ -52,14 +102,17 @@ function App() {
 
       alert('you must type at least 5 characters')
     }
+    */
+
 
   }
+
 
   function handleDelete(i) {
     console.log('You canceled element with id:', i);
     //in questo caso il parametro title c'è ma non è utilizzato
-    const filteredTitles = titles.filter((title, index) => index != i)
-    setTitles(filteredTitles)
+    const filteredArticles = articlesData.filter((articleData, index) => index != i)
+    setArticlesData(filteredArticles)
 
 
   }
@@ -68,7 +121,11 @@ function App() {
     <>
       <header></header>
       <main>
-        <Form titles={titles} newTitle={newTitle} setNewTitle={setNewTitle} handleSubmit={handleSubmit} handleDelete={handleDelete} />
+        <div className="container mt-2">
+          <Form handleSubmit={handleSubmit} handleDelete={handleDelete} handleChange={handleChange} formData={formData} setFormData={setFormData} articlesData={articlesData} />
+
+        </div>
+
       </main>
       <footer></footer>
     </>

@@ -1,10 +1,16 @@
 import { useState } from 'react'
 
+
+// TASK LIST
+
 const initialTasks = [
   'learn php',
   'learn larave',
   'learn ai integration'
 ]
+
+
+// FORM 
 
 const initialFormData = {
   title: '',
@@ -103,6 +109,8 @@ function App() {
   return (
     <>
 
+      {/*TASK LIST  */}
+
       <div className="container my-4">
         <div className="row g-3">
           <div className="col-8">
@@ -125,6 +133,11 @@ function App() {
 
 
           </div>
+
+          {/*FORM */}
+
+
+
           <div className="col-4">
             <div className="card ">
               <div className="card-body">

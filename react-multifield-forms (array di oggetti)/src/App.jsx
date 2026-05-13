@@ -62,10 +62,10 @@ function App() {
     console.log(value);
 
     // creo dinamicamente la chiave mettendo tra le quadre il name dell'elemento
-    console.log({ ...formData, [e.target.name]: e.target.value });
+    console.log({ ...formData, [e.target.name]: value });
 
     //attivo il setter per modificare la UI 
-    setFormData({ ...formData, [e.target.name]: e.target.value })
+    setFormData({ ...formData, [e.target.name]: value })
 
 
   }
@@ -83,6 +83,8 @@ function App() {
   return (
     <>
 
+      {/*TASK LIST  */}
+
       <div className="container my-4">
         <div className="row g-3">
           <div className="col-8">
@@ -97,10 +99,16 @@ function App() {
 
                   {tasks.map((task, i) =>
 
-                    //trasformo la className in un template litteral per poter interpolare la condizione ternaria: Se la task è due today il bg deve diventare rosso altrimenti niente quindi stringa vuota )
+                    /*
+                    trasformo la className in un template litteral per poter 
+                    interpolare la condizione ternaria: Se la task è due today 
+                    il bg deve diventare rosso altrimenti niente quindi stringa vuota )
+                     */
                     <li className={`list-group-item relative mb-2 ${task?.due_today ? `bg-danger-subtle` : ''}`} key={i}>
-                      {/*non posso indicare tutto l'oggetto {task}, ma devo indicare l'elemento specifico quindi {task.title} 
-                      il ? indica di prendere title SE effettivamente è presente nell'oggetto, cioè se è stato digitato nell'input*/}
+                      {/*non posso indicare tutto l'oggetto {task}, ma devo indicare 
+                      l'elemento specifico quindi {task.title} 
+                       il ? indica di prendere title SE effettivamente è 
+                       presente nell'oggetto, cioè se è stato digitato nell'input*/}
 
                       <div className="badge bg-dark position-absolute top-0 end-0 m-2">{task?.priority}</div>
                       <strong>
@@ -121,6 +129,8 @@ function App() {
 
 
           </div>
+
+          {/*FORM */}
           <div className="col-4">
             <div className="card ">
               <div className="card-body">
