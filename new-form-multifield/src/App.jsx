@@ -1,4 +1,3 @@
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { useState } from 'react'
 
 const articlesList = [
@@ -80,6 +79,7 @@ function App() {
                   </div>
                   <div className="input-group mb-2">
                     <select className="form-select" name="category" id="category" value={formData.category} onChange={handleChange}>
+                      <option value="" disabled>Scegli una categoria...</option>
                       <option value="FrontEnd">FrontEnd</option>
                       <option value="BackEnd">BackEnd</option>
                       <option value="UI-UX">UI-UX</option>
@@ -89,22 +89,18 @@ function App() {
                   {/*BONUS */}
 
                   <div className="input-group mb-2">
+
+
                     <div className="form-check">
-                      <input
-                        className="form-check-input"
-                        type="checkbox"
-                        name='pubblicato'
-                        id="pubblicato"
-                      />
-                      <label className="form-check-label" htmlFor="pubblicato"> Pubblicato </label>
+                      <input className="form-check-input" type="checkbox" name="checked" id="checked" checked={formData.checked} onChange={handleChange} />
+                      <label className="form-check-label" htmlFor="">Pubblicato </label>
                     </div>
 
 
                   </div>
 
                   <button className='btn btn-primary position-absolute bottom-0 end-0 m-2' >
-                    click me
-                  </button>
+                    Submit                  </button>
                 </form>
 
               </div>
@@ -123,16 +119,21 @@ function App() {
                     articles.map((article, i) =>
                       <li className='list-group-item d-flex relative justify-content-between align-items-center p-1 mb-2 relative' key={i}>
 
-                        <div className="d-flex flex-column g-1">
-
-                          <strong>
-                            {article?.title}
-                          </strong>
+                        <div className="d-flex flex-column gap-1">
+                          <strong>{article?.title}</strong>
                           <h2>{article?.author}</h2>
                           <p>{article?.notes}</p>
-                          <div>
-                            <label className="badge  text-bg-primary d-block mb-2" htmlFor="">{article?.category}</label>
-                            <label className="badge text-bg-success d-block " htmlFor="">Pubblicato</label>
+
+                          <div className="d-flex gap-1">
+                            {/* Stampa SOLO se category esiste e non è una stringa vuota */}
+                            {article.category && article.category.trim() !== "" && (
+                              <span className="badge text-bg-primary">{article.category}</span>
+                            )}
+
+                            {/* Stampa SOLO se checked è strettamente true */}
+                            {article.checked === true && (
+                              <span className="badge text-bg-success">Pubblicato</span>
+                            )}
                           </div>
                         </div>
 
