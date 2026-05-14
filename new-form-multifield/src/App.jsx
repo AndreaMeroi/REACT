@@ -70,7 +70,7 @@ function App() {
               <div className="card-body">
                 <form onSubmit={handleSubmit}>
                   <div className="input-group mb-2">
-                    <input className="form-control" type="text" name='title' id="title" value={formData.title} placeholder='type your text' onChange={handleFormData} />
+                    <input className="form-control" type="text" name='title' id="title" value={formData.title} placeholder='type article title' onChange={handleFormData} />
                   </div>
                   <div className="input-group mb-2">
                     <input className="form-control" type="text" name='author' id="author" value={formData.author} placeholder='type author name' onChange={handleFormData} />
