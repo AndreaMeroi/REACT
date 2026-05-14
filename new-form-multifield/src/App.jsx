@@ -47,7 +47,7 @@ function App() {
 
   }
 
-  function handleFormData(e) {
+  function handleChange(e) {
 
     const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value
 
@@ -70,16 +70,16 @@ function App() {
               <div className="card-body">
                 <form onSubmit={handleSubmit}>
                   <div className="input-group mb-2">
-                    <input className="form-control" type="text" name='title' id="title" value={formData.title} placeholder='type article title' onChange={handleFormData} />
+                    <input className="form-control" type="text" name='title' id="title" value={formData.title} placeholder='type article title' onChange={handleChange} />
                   </div>
                   <div className="input-group mb-2">
-                    <input className="form-control" type="text" name='author' id="author" value={formData.author} placeholder='type author name' onChange={handleFormData} />
+                    <input className="form-control" type="text" name='author' id="author" value={formData.author} placeholder='type author name' onChange={handleChange} />
                   </div>
                   <div className="input-group mb-2">
-                    <textarea className="form-control" name="notes" id="notes" value={formData.notes} placeholder='type your notes.. ' onChange={handleFormData} ></textarea>
+                    <textarea className="form-control" name="notes" id="notes" value={formData.notes} placeholder='type your notes.. ' onChange={handleChange} ></textarea>
                   </div>
                   <div className="input-group mb-2">
-                    <select className="form-select" name="category" id="category" value={formData.category} onChange={handleFormData}>
+                    <select className="form-select" name="category" id="category" value={formData.category} onChange={handleChange}>
                       <option value="FrontEnd">FrontEnd</option>
                       <option value="BackEnd">BackEnd</option>
                       <option value="UI-UX">UI-UX</option>
