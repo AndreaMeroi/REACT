@@ -12,10 +12,12 @@ export default function UlTitles({ articlesData, handleDelete }) {
                     {
                         articlesData.map((article, i) =>
 
-                            <li className='list-group-item d-flex justify-content-between align-items-center p-1 mb-2 relative' key={i}>
+                            <li className='list-group-item d-flex relative justify-content-between align-items-center p-1 mb-2 relative' key={i}>
                                 <div className="d-flex flex-column g-1">
-                                    <strong className=''>{article?.tile}</strong>
-                                    <h2>{article.title}</h2>
+                                    <strong className=''>
+                                        {article?.tile}
+                                    </strong>
+                                    <h2>{article?.title}</h2>
                                     <h3>{article?.author}</h3>
                                     <p>{article.comment}</p>
                                     <div className='position-absolute top-0 end-0 m-2'>

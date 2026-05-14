@@ -13,7 +13,7 @@ function App() {
   const [newTask, setNewTask] = useState('')
   //creo una variabile di stato per poter aggiornare la UI aggiungendo la task digitata dopo aver cliccato il bottone
   // in questo modo map ciclerà su tasks che contiene initialTasks e ciò che viene digitato nell'input 
-  const [tasks, setTask] = useState(initialTasks)
+  const [tasks, setTasks] = useState(initialTasks)
 
   // funzione per modificare la UI aggiungendo una nuova task
   function handleSubmit(e) {
@@ -21,11 +21,12 @@ function App() {
     console.log('Clicked Submit');
 
     console.log(newTask, newTask.length);
+
     if (newTask.length > 5) {
       //update tasks
       console.log('You can update the tasks');
       //per clonare il vecchio state aggiungendo la nuova task e quindi aggiornare la UI utilizzo l'operatore spread(...)
-      setTask([newTask, ...tasks])
+      setTasks([newTask, ...tasks])
       //per svuotare il compo dell'input 
       setNewTask('')
 
@@ -43,9 +44,9 @@ function App() {
     //devo creare un nuovo array per modificare lo stato, utilizzo filter 
     // se index è diverso da i allora lo voglio nelle filteredTasks, quindi la task cliccata non sarà più nel nuovo array
     const filteredTasks = tasks.filter((task, index) => index != i)
-    console.log(filteredTasks,);
+    console.log(filteredTasks);
     //uso setTasks per modificare la UI
-    setTask(filteredTasks)
+    setTasks(filteredTasks)
 
     //2 OPZIONI PER ATTIVARE LA MODIFICA DELL'UI SENZA CREARE LA VARIABILE filteredTasks
 
