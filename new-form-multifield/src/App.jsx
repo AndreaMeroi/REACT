@@ -55,8 +55,6 @@ function App() {
 
   }
 
-
-
   // ERRORE: la lista aggiornata si vede in console, ma non nell'UI, all'invio l'elenco aggiornato di articoli si vede nell'input e non nella UL 
   return (
     <>
@@ -85,12 +83,7 @@ function App() {
                       <option value="UI-UX">UI-UX</option>
                     </select>
                   </div>
-
-                  {/*BONUS */}
-
                   <div className="input-group mb-2">
-
-
                     <div className="form-check">
                       <input className="form-check-input" type="checkbox" name="checked" id="checked" checked={formData.checked} onChange={handleChange} />
                       <label className="form-check-label" htmlFor="">Pubblicato </label>
@@ -149,19 +142,9 @@ function App() {
 
               </div>
             </div>
-
-
           </div>
-
-
-
-
         </div>
       </div>
-
-
-
-
 
     </>
   )

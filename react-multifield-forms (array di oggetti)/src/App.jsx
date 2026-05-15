@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 // salvo un array vuoto per partire con la pagina vuota 
 const initialTasks = [
@@ -24,6 +24,20 @@ function App() {
 
   const [formData, setFormData] = useState(initialFormData)
   const [tasks, setTasks] = useState(initialTasks)
+
+  // per utilizzare useEffect
+  const [filtererdTasks, setFilteredTasks] = useState(tasks)
+  const [search, setSearch] = useState('')
+
+
+  useEffect(() => {
+    console.log('I am useEffetct');
+    //filter the tasks 
+    const filtered = tasks.filter(task => task.title.toLowerCase().includes(search.toLocaleLowerCase()))
+    //update the filteredTasks state
+    setFilteredTasks(filtered)
+
+  }, [search, tasks])
 
   function handleSubmit(e) {
     e.preventDefault()
@@ -94,10 +108,14 @@ function App() {
               <div className="card-body">
 
                 <h3>Tasks To DO</h3>
+
+                <div className="search-box">
+                  <input type="search" value={search} onChange={(e) => setSearch(e.target.value)} />
+                </div>
                 <ul className='list-group'>
 
 
-                  {tasks.map((task, i) =>
+                  {filtererdTasks.map((task, i) =>
 
                     /*
                     trasformo la className in un template litteral per poter 
