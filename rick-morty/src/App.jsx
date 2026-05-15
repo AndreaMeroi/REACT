@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 function App() {
 
   //make a state variable where store the charaters lilst
@@ -29,6 +29,12 @@ function App() {
 
 
   }
+
+  // uso useEffect per richiamare il fetch dei dati e quindi l'aggiornamento del contenuto della variabiule
+  // e l'aggiornamentio della UI solo al primo caricamento 
+  // se richiamassi solo fetchData() attiverei un ciclo infinito di chiamate 
+  useEffect(fetchData, [])
+
 
 
   return (
