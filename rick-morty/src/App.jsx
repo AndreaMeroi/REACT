@@ -24,10 +24,6 @@ function App() {
       .catch((err) => {
         console.error(err.message);
       })
-
-
-
-
   }
 
   // uso useEffect per richiamare il fetch dei dati e quindi l'aggiornamento del contenuto della variabiule
@@ -60,13 +56,14 @@ function App() {
               section. Check out the examples below for how you can remix and
               restyle it to your liking.
             </p>
-            <button className="btn btn-primary btn-lg" type="button">
+            <button className="btn btn-dark btn-lg" type="button">
               Explore Characters            </button>
           </div>
         </div>
+
         <section id="characters">
           <div className="container">
-            <div className="row">
+            <div className="row g-4">
 
               {characters.map(character =>
 
@@ -75,7 +72,26 @@ function App() {
                     <img className='card-img-top' src={character.image} alt="" />
                     <div className="card-body">
                       <h3>{character.name}</h3>
-                      <span className="badge bg-dark">badge</span>
+
+
+                      <div className='d-flex justify-content-between alig-items-center'>
+
+                        <span >
+                          Specie: <strong>{character.species}</strong>
+                        </span>
+
+                        <span className='badge bg-dark btn-sm position-relative'>
+                          {character.status}
+                          <span className='position-absolute top-0 start-100 translate-middle p-2 bg-success border border-light rounded-circle'>
+                            <span className='visually-hidden'>new alerts</span>
+                          </span>
+
+                        </span>
+
+                      </div>
+
+
+
                     </div>
 
                   </div>
