@@ -6,7 +6,7 @@ export default function AboutPage() {
 
     return (
         <>
-            <AppHeader />
+
             <main>
                 <AppJumbotron title='Its me Andrea' description='This is a simple hero unit......' cta='visit my website' />
 
@@ -18,7 +18,7 @@ export default function AboutPage() {
 
             </main>
 
-            <AppFooter />
+
         </>
     )
 

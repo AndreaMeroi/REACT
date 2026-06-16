@@ -17,6 +17,8 @@ export default function AppFooter() {
                                 <li> <Link to='/'>Home</Link> </li>
                                 <li> <Link to='/about'>About</Link> </li>
                                 <li> <Link to='/contacts'>Contacts</Link> </li>
+                                <li> <Link to='/Login'>Login</Link> </li>
+                                <li> <Link to='/Register'>Register</Link> </li>
                             </ul>
                         </div>
                         <div className="col-12 col-sm-6 col-md-4">

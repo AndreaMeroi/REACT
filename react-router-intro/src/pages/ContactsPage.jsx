@@ -6,7 +6,7 @@ export default function ContactsPage() {
 
     return (
         <>
-            <AppHeader />
+
             <main>
                 <AppJumbotron title='Welcome to my website' description='This is a simple hero unit......' cta='Visit my git hub' />
 
@@ -33,7 +33,7 @@ export default function ContactsPage() {
 
             </main>
 
-            <AppFooter />
+
 
         </>
     )

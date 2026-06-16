@@ -6,7 +6,7 @@ export default function HomePage() {
 
     return (
         <>
-            <AppHeader />
+
             <main>
                 {/*jumbotron*/}
                 <AppJumbotron title='Welcome to my website' description='This is a simple hero unit......' cta='Visit my git hub' />
@@ -73,7 +73,7 @@ export default function HomePage() {
 
 
             </main>
-            <AppFooter />
+
         </>
     )
 
