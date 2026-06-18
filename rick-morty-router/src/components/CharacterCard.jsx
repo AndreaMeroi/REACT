@@ -1,5 +1,5 @@
 
-{/*passo alla funzione la prop character per poter accedere al contenuto della variabile salvata in CharacterPage */ }
+/*passo alla funzione la prop character per poter accedere al contenuto della variabile salvata in CharacterPage */
 export default function CharacterCard({ character }) {
 
     return (

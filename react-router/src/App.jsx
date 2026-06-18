@@ -7,6 +7,7 @@ import DefaultLayout from "./layouts/DefaultLayout"
 import HomePage from "./assets/pages/HomePage"
 import ChiSiamo from "./assets/pages/ChiSiamo"
 import Prodotti from "./assets/pages/Prodotti"
+import Prodotto from "./assets/pages/Prodotto"
 
 
 
@@ -23,7 +24,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/chisiamo" element={<ChiSiamo />} />
             <Route path="/prodotti" element={<Prodotti />} />
-
+            <Route path="/prodotto/:id" element={<Prodotto />} />
           </Route>
 
         </Routes>
