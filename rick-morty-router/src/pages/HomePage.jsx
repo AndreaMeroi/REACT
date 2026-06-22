@@ -1,33 +1,15 @@
-import axios from 'axios'
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import FavouritesContext from '../contexts/favouritescontext';
 
 
 export default function HomePage() {
 
     //make a state variable where store the charaters lilst
-    const [characters, setCharacters] = useState([])
+
     const [currentPage, setCurrentPage] = useState(1)
+    const { characters, fetchData, isFavourite, favourites } = useContext(FavouritesContext)
 
 
-    function fetchData(page) {
-        console.log('you clicked on fetchData');
-        //fetch the data with axios 
-        axios
-            .get(`https://rickandmortyapi.com/api/character?page=${page}`)
-            .then(res => {
-
-                //log the fetched data
-                console.log(res.data.results);
-                // salvo il contenuto di data (info e results)  in due variabilie
-                const { info, results } = res.data
-
-                //update the state variable 
-                setCharacters(results)
-            })
-            .catch((err) => {
-                console.error(err.message);
-            })
-    }
 
     // uso useEffect per richiamare il fetch dei dati e quindi l'aggiornamento del contenuto della variabiule
     // e l'aggiornamentio della UI solo al primo caricamento 
@@ -60,40 +42,44 @@ export default function HomePage() {
                     <div className="container">
                         <div className="row g-4">
 
-                            {characters.map(character =>
+                            {characters?.map(character =>
 
-                                <div className="col-12 col-sm-6 col-md-4" key={character.id} >
-                                    <div className="card h-100">
-                                        <img className='card-img-top' src={character.image} alt="" />
-                                        <div className="card-body">
-                                            <h3>{character.name}</h3>
+                                isFavourite(character.id) &&
+
+                                (
+                                    <div className="col-12 col-sm-6 col-md-4" key={character.id} >
+                                        <div className="card h-100">
+                                            <img className='card-img-top' src={character.image} alt="" />
+                                            <div className="card-body">
+                                                <h3>{character.name}</h3>
 
 
-                                            <div className='d-flex justify-content-between alig-items-center'>
+                                                <div className='d-flex justify-content-between alig-items-center'>
 
-                                                <span >
-                                                    Specie: <strong>{character.species}</strong>
-                                                </span>
-
-                                                <span className='badge bg-dark btn-sm position-relative'>
-                                                    {character.status}
-                                                    <span className='position-absolute top-0 start-100 translate-middle p-2 bg-success border border-light rounded-circle'>
-                                                        <span className='visually-hidden'>new alerts</span>
+                                                    <span >
+                                                        Specie: <strong>{character.species}</strong>
                                                     </span>
 
-                                                </span>
+                                                    <span className='badge bg-dark btn-sm position-relative'>
+                                                        {character.status}
+                                                        <span className='position-absolute top-0 start-100 translate-middle p-2 bg-success border border-light rounded-circle'>
+                                                            <span className='visually-hidden'>new alerts</span>
+                                                        </span>
+
+                                                    </span>
+
+                                                </div>
+
+
 
                                             </div>
 
-
-
                                         </div>
-
                                     </div>
-                                </div>
 
-                            )}
+                                ))}
 
+                            {favourites.length == 0 && <p> No features selected, come back after you liked any </p>}
                         </div>
                     </div>
                 </section>

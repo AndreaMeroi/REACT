@@ -1,34 +1,17 @@
 import { Link } from 'react-router-dom';
 import axios from 'axios'
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+
+import FavouritesContext from '../contexts/favouritescontext';
 
 
 export default function CharactersPage() {
 
     //make a state variable where store the charaters lilst
-    const [characters, setCharacters] = useState([])
     const [currentPage, setCurrentPage] = useState(1)
+    const { isFavourite, toggleFavourites, characters, fetchData } = useContext(FavouritesContext)
 
 
-    function fetchData(page) {
-        console.log('you clicked on fetchData');
-        //fetch the data with axios 
-        axios
-            .get(`https://rickandmortyapi.com/api/character?page=${page}`)
-            .then(res => {
-
-                //log the fetched data
-                console.log(res.data.results);
-                // salvo il contenuto di data (info e results)  in due variabilie
-                const { info, results } = res.data
-
-                //update the state variable 
-                setCharacters(results)
-            })
-            .catch((err) => {
-                console.error(err.message);
-            })
-    }
 
     // uso useEffect per richiamare il fetch dei dati e quindi l'aggiornamento del contenuto della variabiule
     // e l'aggiornamentio della UI solo al primo caricamento 
@@ -94,6 +77,8 @@ export default function CharactersPage() {
 
                                             </div>
 
+                                            <span onClick={() => toggleFavourites(character.id)}>
+                                                {isFavourite(character.id) ? '❤️' : '🤍'} </span>
 
 
                                         </div>

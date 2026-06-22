@@ -1,6 +1,12 @@
+import FavouritesContext from "../contexts/favouritescontext";
+import { useContext } from "react";
+
 
 /*passo alla funzione la prop character per poter accedere al contenuto della variabile salvata in CharacterPage */
 export default function CharacterCard({ character }) {
+
+    const { isFavourite, toggleFavourites } = useContext(FavouritesContext)
+
 
     return (
 
@@ -10,6 +16,8 @@ export default function CharacterCard({ character }) {
             <div>Specie: {character.species}</div>
             <div>Gender: {character.gender}</div>
             <div> Status: {character.status}</div>
+            <span onClick={() => toggleFavourites(character.id)}>
+                {isFavourite(character.id) ? '❤️' : '🤍'} </span>
         </div>
 
     )
